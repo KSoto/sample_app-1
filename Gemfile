@@ -2,12 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
-gem 'sqlite3'
-
 gem 'bootstrap-sass'
 
 group :development do
-  gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -29,3 +27,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end

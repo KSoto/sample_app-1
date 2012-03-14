@@ -2,6 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
+gem 'sqlite3'
+
+gem 'bootstrap-sass'
+
 group :development do
   gem 'rspec-rails'
 end

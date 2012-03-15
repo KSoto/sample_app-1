@@ -1,11 +1,18 @@
 module ApplicationHelper
-  # Returns the full title on a per-page basis.
-  def full_title(page_title)
-    base_title = "Ruby on Rails Tutorial Sample App"
-    if page_title.empty?
-      base_title
+
+  def logo
+  logo = image_tag("logo.png", :alt => "Sample App", :class => "round")
+  	link_to logo, root_path
+  end
+
+
+  # Return a title on a per-page basis.               # Documentation comment
+  def title                                           # Method definition
+    base_title = "Fake Twitter App"  # Variable assignment
+    if @title.nil?                                    # Boolean test for nil
+      base_title                                      # Implicit return
     else
-      "#{base_title} | #{page_title}"
+      "#{base_title} | #{@title}"                     # String interpolation
     end
   end
 end
